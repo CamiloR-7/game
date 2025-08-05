@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Préstamos</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Gestión de Préstamos</h1>
+    <nav>
+      <a href="index.html">Videojuegos</a>
+      <a href="usuarios.html">Usuarios</a>
+      <a href="prestamos.html">Préstamos</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Registrar nuevo préstamo</h2>
+      <form id="formPrestamo">
+        <select id="usuarioId" required>
+          <option value="">-- Selecciona usuario --</option>
+        </select>
+
+        <select id="juegoId" required>
+          <option value="">-- Selecciona videojuego --</option>
+        </select>
+
+        <input type="date" id="fechaLimite" required />
+
+        <button type="submit" id="btnGuardar">Registrar</button>
+        <button type="button" id="btnCancelar" hidden>Cancelar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Lista de Préstamos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Videojuego</th>
+            <th>Fecha préstamo</th>
+            <th>Fecha límite</th>
+            <th>Total</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaPrestamos"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="./js/prestamos.js"></script>
+</body>
+</html>

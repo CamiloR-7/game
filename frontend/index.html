@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Videojuegos</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Gestión de Videojuegos</h1>
+    <nav>
+      <a href="index.html">Videojuegos</a>
+      <a href="usuarios.html">Usuarios</a>
+      <a href="prestamos.html">Préstamos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Registrar / Editar Videojuego</h2>
+      <form id="formJuego">
+        <input type="text" placeholder="Título" required id="titulo" />
+        <input type="text" placeholder="Desarrollador" required id="desarrollador" />
+        <input type="number" step="0.1" placeholder="Calificación" required id="calificacion" />
+        <input type="date" required id="fechaSalida" />
+        <input type="number" step="0.01" placeholder="Precio" required id="precio" />
+        
+        <select id="generoId" required>
+          <option value="">-- Selecciona género --</option>
+        </select>
+
+        <select id="clasificacionId" required>
+          <option value="">-- Selecciona clasificación --</option>
+        </select>
+
+        <input type="number" placeholder="Stock" required id="stock" />
+        <button type="submit" id="btnGuardar">Guardar</button>
+        <button type="button" id="btnCancelar" hidden>Cancelar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Catálogo de Videojuegos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Título</th><th>Desarrollador</th><th>Calificación</th>
+            <th>Fecha</th><th>Precio</th><th>Género</th>
+            <th>Clasificación</th><th>Stock</th><th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaJuegos"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
